@@ -1,0 +1,1 @@
+<view class="main_box data-v-2177a356"><view class="data-v-2177a356"><slot name="title"></slot></view><view class="data-v-2177a356"><slot name="infos"></slot></view></view>
