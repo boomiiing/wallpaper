@@ -42,6 +42,26 @@ function _sfc_render(_ctx, _cache) {
       type: "right",
       size: "20",
       color: "#28b389"
+    }),
+    h: common_vendor.p({
+      type: "download-filled",
+      size: "20",
+      color: "#28b389"
+    }),
+    i: common_vendor.p({
+      type: "right",
+      size: "20",
+      color: "#28b389"
+    }),
+    j: common_vendor.p({
+      type: "star-filled",
+      size: "20",
+      color: "#28b389"
+    }),
+    k: common_vendor.p({
+      type: "right",
+      size: "20",
+      color: "#28b389"
     })
   };
 }

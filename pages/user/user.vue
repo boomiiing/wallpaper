@@ -19,6 +19,7 @@
 						<text>我的下载</text>
 					</view>
 					<view class="more">
+						<text>10</text>
 						<uni-icons type="right" size="20" color="#28b389"></uni-icons>
 					</view>
 				</view>
@@ -28,6 +29,7 @@
 						<text>我的收藏</text>
 					</view>
 					<view class="more">
+						<text>10</text>
 						<uni-icons type="right" size="20" color="#28b389"></uni-icons>
 					</view>
 				</view>
@@ -37,12 +39,30 @@
 						<text>联系客服</text>
 					</view>
 					<view class="more">
+						<button type="primary" open-type="contact" size="mini" class="contant">客服</button>
 						<uni-icons type="right" size="20" color="#28b389"></uni-icons>
 					</view>
 				</view>
 			</view>
-			<view class="question">
-				
+			<view class="recording question">
+				<view class="item">
+					<view class="title">
+						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
+						<text>订阅更新</text>
+					</view>
+					<view class="more">
+						<uni-icons type="right" size="20" color="#28b389"></uni-icons>
+					</view>
+				</view>
+				<view class="item">
+					<view class="title">
+						<uni-icons type="star-filled" size="20" color="#28b389"></uni-icons>
+						<text>常见问题</text>
+					</view>
+					<view class="more">
+						<uni-icons type="right" size="20" color="#28b389"></uni-icons>
+					</view>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -82,9 +102,6 @@
 			.recording{
 				box-shadow: 0px 0px 25px 10px rgba(100, 100, 111, 0.2);
 				border-radius: 15rpx;
-				.recording:last-child{
-					border: none;
-				}
 				.item{
 					height: 80rpx;
 					width: 100%;
@@ -94,12 +111,34 @@
 					justify-content: space-between;
 					align-items: center;
 					border-bottom: 1px solid #ccc;
+					position: relative;
+					&:last-child{
+						border: none;
+					}
+					.contant{
+						position: absolute;
+						top: 0;
+						right: 0;
+						width:100%;
+						height:80rpx;
+						opacity: 0;
+					}
 					.title{
-						uni-icons{
-							margin-right: 20rpx;
+						text{
+							margin-left: 20rpx;
+							font-size: 35rpx;
+						}
+					}
+					.more{
+						text{
+							font-size: 35rpx;
+							color:#ccc
 						}
 					}
 				}
+			}
+			.question{
+				margin-top: 80rpx;
 			}
 		}
 
