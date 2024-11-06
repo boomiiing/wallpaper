@@ -1,1 +1,1 @@
-<view class="main_box data-v-6bcfa975"><theme-box wx:for="{{a}}" wx:for-item="item" class="data-v-6bcfa975" u-i="{{item.a}}" bind:__l="__l"></theme-box></view>
+<view class="main_classify_box backColor data-v-6bcfa975"><theme-box wx:for="{{a}}" wx:for-item="item" class="data-v-6bcfa975" u-i="{{item.a}}" bind:__l="__l" u-p="{{b}}"></theme-box></view>

@@ -32,8 +32,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     c: common_assets._imports_2,
     d: common_vendor.p({
       type: "sound-filled",
-      size: "30",
-      color: "#28b389"
+      size: "25",
+      color: "$uni-icon-color"
     }),
     e: common_vendor.p({
       type: "right",
@@ -47,8 +47,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     g: common_vendor.p({
       type: "calendar-filled",
-      size: "20",
-      color: "#28b389"
+      size: "20"
     }),
     h: common_vendor.p({
       date: Date.now(),

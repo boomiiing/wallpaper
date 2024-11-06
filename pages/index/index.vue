@@ -1,5 +1,5 @@
 <template>
-	<view class="homeLayout">
+	<view class="homeLayout backColor">
 		<view class="banner">
 			<swiper :indicator-dots="true" indicator-color="rgba(255,255,255,0.5)" indicator-active-color="red" :autoplay="true" :interval="3000" :duration="1000" circular>
 				<swiper-item >
@@ -15,7 +15,7 @@
 		</view>
 		<view class="tabBar">
 			<view class="tabTitle">
-				<uni-icons type="sound-filled" size="30" color="#28b389"></uni-icons>
+				<uni-icons type="sound-filled" size="25" color="$uni-icon-color"></uni-icons>
 				<text>公告</text>
 			</view>
 			<view class="tabSwiper">
@@ -41,9 +41,9 @@
 					今日推荐
 				</template>
 				<template #infos>
-					<view style="font-size: 30rpx;color:#28b389">
-						<uni-icons type="calendar-filled" size="20" color="#28b389"></uni-icons>
-						<uni-dateformat :date="Date.now()" format="dd号"></uni-dateformat>
+					<view class="infos">
+						<uni-icons type="calendar-filled" size="20"></uni-icons>
+						<uni-dateformat :date="Date.now()" format="dd号" class="dateFont"></uni-dateformat>
 					</view>
 				</template>
 			</commen-title>
@@ -139,14 +139,14 @@
 		align-items: center;
 		.tabTitle{
 			height: 100%;
-			width: 120rpx;
+			width: 130rpx;
 			display: flex;
 			align-items: center;
-			color:#28b389;
+			color:$uni-icon-color;
 		}
 		.tabSwiper{
 			height: 100%;
-			width: calc(100% - 120rpx);
+			width: calc(100% - 130rpx);
 			swiper{
 				height: 100%;
 				swiper-item{
@@ -167,6 +167,17 @@
 	}
 	.selected_box{
 		margin: 30rpx;
+		.infos{
+			:deep(){
+				.uni-icons{
+					color:$uni-icon-color!important
+				}
+			}
+			.dateFont{
+				font-size: 35rpx;
+				color:$uni-icon-color!important
+			}
+		}
 		.scroll_box{
 			width:690rpx;
 			margin: 20rpx 0;

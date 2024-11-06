@@ -1,6 +1,6 @@
 <template>
-	<view class="main_box">
-		<theme-box v-for="item in 8"></theme-box>
+	<view class="main_classify_box backColor">
+		<theme-box v-for="item in 12" :imageSrc="'../../common/images/preview_small.webp'"></theme-box>
 	</view>
 </template>
 
@@ -9,9 +9,9 @@
 </script>
 
 <style lang="scss" scoped>
-	.main_box{
+	.main_classify_box{
 		display: grid;
-		grid-template-columns: repeat(3,1fr);
-		gap: 15px;
+			grid-template-columns:1fr 1fr 1fr;
+			gap:20rpx
 	}
 </style>
