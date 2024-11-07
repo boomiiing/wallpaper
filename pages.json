@@ -17,6 +17,20 @@
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
+		},
+		{
+			"path" : "pages/classifyList/classifyList",
+			"style" : 
+			{
+				"navigationBarTitleText" : "分类列表"
+			}
+		},
+		{
+			"path" : "pages/preview/preview",
+			"style" : 
+			{
+				"navigationBarTitleText" : "预览"
+			}
 		}
 	],
 	"globalStyle": {

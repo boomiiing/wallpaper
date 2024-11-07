@@ -1,6 +1,6 @@
 <template>
 	<view class="main_box">
-		<navigator url="" v-if='!isMore'>
+		<navigator url="/pages/classifyList/classifyList" v-if='!isMore'>
 			<image :src="imageSrc"></image>
 			<view class="refreshDate">
 				5天前更新
@@ -9,7 +9,7 @@
 				<text>你好</text>
 			</view>
 		</navigator>
-		<navigator url="" v-else>
+		<navigator url="/pages/classify/classify" open-type="reLaunch" v-else>
 			<image :src="imageSrc"></image>
 			<view class="more">
 				<uni-icons type="more-filled" size="40" color="#fff"></uni-icons>

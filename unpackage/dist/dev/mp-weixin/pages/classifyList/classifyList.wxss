@@ -1,0 +1,25 @@
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.classify_box .pic_box.data-v-d7121c9c {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rpx;
+}
+.classify_box .pic_box .pic_item.data-v-d7121c9c {
+  height: 440rpx;
+}
+.classify_box .pic_box .pic_item image.data-v-d7121c9c {
+  height: 100%;
+  width: 100%;
+}

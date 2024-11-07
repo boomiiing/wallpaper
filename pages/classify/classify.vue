@@ -1,6 +1,6 @@
 <template>
 	<view class="main_classify_box backColor">
-		<theme-box v-for="item in 12" :imageSrc="'../../common/images/preview_small.webp'"></theme-box>
+		<theme-box v-for="item in 14" :imageSrc="'../../common/images/preview_small.webp'"></theme-box>
 	</view>
 </template>
 
