@@ -13,14 +13,14 @@
 				6/9
 			</view>
 			<view class="detail_time">
-				09:54
+				<uni-dateformat :date="new Date()" format="hh:mm"></uni-dateformat>
 			</view>
 			<view class="date_time">
-				11月12日
+				<uni-dateformat :date="new Date()" format="MM月dd日"></uni-dateformat>
 			</view>
 			<view class="foot_box">
 				<view class="info">
-					<view class="item">
+					<view class="item" @click="toggle('bottom')"> 
 						<view class="">
 							<uni-icons type="info" size="25" ></uni-icons>
 						</view>
@@ -28,7 +28,7 @@
 							信息
 						</view>
 					</view>
-					<view class="item">
+					<view class="item" @click="openCountPopup">
 						<view class="">
 							<uni-icons type="star" size="25" ></uni-icons>
 						</view>
@@ -47,15 +47,116 @@
 				</view>
 			</view>
 		</view>
+		<uni-popup ref="popupBox" class="infoPopup">
+			<view class="info">
+				<view class="title">
+					壁纸信息
+					<view class="close" @click="closeInfo">
+						<uni-icons type="closeempty"></uni-icons>
+					</view>
+				</view>
+				<scroll-view class="main_info" scroll-y>
+					<view class="item">
+						<view class="label">
+							壁纸ID：
+						</view>
+						<view class="value">
+							1233312312312331
+						</view>
+					</view>
+					<view class="item">
+						<view class="label">
+							分类：
+						</view>
+						<view class="value">
+							明星美女
+						</view>
+					</view>
+					<view class="item">
+						<view class="label">
+							发布者：
+						</view>
+						<view class="value">
+							咸虾米
+						</view>
+					</view>
+					<view class="item">
+						<view class="label">
+							评分：
+						</view>
+						<view class="value">
+								<uni-rate v-model="rateValue" readonly="true" />
+						</view>
+					</view>
+					<view class="item">
+						<view class="label">
+							摘要：
+						</view>
+						<view class="value" >
+							阿三大苏打大啊啊啊啊啊啊啊实打实大大啊阿三大苏打大啊啊啊啊啊啊啊实打实大大啊阿三大苏打大啊啊啊啊啊啊啊实打实大大啊阿三大苏打大啊啊啊啊啊啊啊实打实大大啊
+						</view>
+					</view>
+					<view class="item">
+						<view class="label">
+							标签：
+						</view>
+						<view class="value">
+							<view class="element" v-for="item in 5">
+								标签名
+							</view>
+						</view>
+					</view>
+					<view class="copyright">
+						免责声明：本公众号发布的所有内容，包括但不限于文字、图片、音频、视频、图表、标志、标识、广告、商标、商号、域名、软件、程序等，除特别标明外，均来源于网络或用户投稿，版权归原作者或原出处所有。我们致力于保护原作者版权，若涉及版权问题，请及时联系我们进行处理。
+					</view>
+				</scroll-view>
+			</view>
+		</uni-popup>
+		<uni-popup ref="setCount" class="countPopup">
+			<view class="main_box">
+				<view class="title">
+					<view></view>
+					<view class="name">壁纸信息</view>
+					<view class="close" @click="closeCount">
+						<uni-icons type="closeempty"></uni-icons>
+					</view>
+				</view>
+				<view class="star">
+					<uni-rate v-model="rateCount" margin="5" size="30"></uni-rate>
+					<view class="number">
+						{{rateCount}}分
+					</view>
+				</view>
+				<button @click="submitScore" type="default" plain="true" size="mini">确认评分</button>
+			</view>
+		</uni-popup>
 	</view>
 </template>
 
-<script setup>
+<script setup>true
 	import {ref} from 'vue';
  let showFlag = ref(true)
  const maskShow = ()=>{
-	 console.log('asd')
 	 showFlag.value = !showFlag.value
+ }
+ let popupBox = ref(null)
+ const toggle = ()=>{
+		popupBox.value.open('bottom')
+ }
+ const closeInfo = ()=>{
+	 popupBox.value.close()
+ }
+ let rateValue = ref(3)
+ const setCount = ref(null)
+ const rateCount = ref(3)
+ const openCountPopup = ()=>{
+	 setCount.value.open()
+ }
+ function closeCount(){
+	 setCount.value.close()
+ }
+ function submitScore(){
+	 
  }
 </script>
 
@@ -143,6 +244,86 @@
 						font-size: 20rpx;
 					}
 				}
+			}
+		}
+		.infoPopup{
+			.info{
+				background-color: #fff;
+				border-radius: 20rpx 20rpx 0 0;
+				padding: 30rpx;
+				.title{
+					text-align: center;
+					color:#ccc;
+					position: relative;
+					.close{
+						position: absolute;
+						right:0;
+						top:0;
+						cursor: pointer;
+					}
+				}
+				.main_info{
+					min-height: 20vh;
+					max-height: 50vh;
+					.item{
+						display: flex;
+						width: 100%;
+						margin: 30rpx 0rpx;
+						.label{
+							width:150rpx;
+							text-align: right;
+							color:#ccc
+						}
+						.value{
+							flex:1;
+							.element{
+								display: inline-block;
+								border:1px solid #094;
+								border-radius: 25rpx;
+								padding:2rpx 15rpx;
+								margin-right: 10rpx;
+							}
+						}
+					}
+					.copyright{
+						background: #f7f7f7;
+						padding:20rpx;
+						border-radius: 20rpx;
+					}
+				}
+			}
+		}
+		.countPopup{
+			.main_box{
+				background: #fff;
+				width: 70vw;
+				height: 300rpx;
+				border-radius: 30rpx;
+				padding:0 20rpx;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				.title{
+					display: flex;
+					justify-content: space-between;
+					.name{
+						color:#ccc;
+					}
+					.close{
+						cursor: pointer;
+					}
+				}
+				.star{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					.number{
+						font-size: 38rpx;
+						color:#ffca3e;
+						padding-bottom:3rpx ;
+					}
+				}
+				
 			}
 		}
 	}
