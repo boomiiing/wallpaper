@@ -10,7 +10,8 @@
 
 <style lang="scss" scoped>
 	.main_classify_box{
-		display: grid;
+			padding: 20rpx;
+			display: grid;
 			grid-template-columns:1fr 1fr 1fr;
 			gap:20rpx
 	}

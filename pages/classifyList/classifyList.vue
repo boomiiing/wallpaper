@@ -1,5 +1,5 @@
 <template>
-	<view class="classify_box">
+	<view class="classify_box" style="padding: 20px;">
 		<view  class="pic_box">
 			<view v-for="item in 11" class="pic_item">
 				<image mode="aspectFill" src="../../common/images/preview2.jpg" ></image>
@@ -27,6 +27,7 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
 			gap: 5rpx;
+			padding: 20rpx;
 			.pic_item{
 				height: 440rpx;
 					image{

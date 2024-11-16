@@ -12,18 +12,20 @@ const _sfc_main = {
   methods: {}
 };
 if (!Array) {
+  const _easycom_custom_nav_bar2 = common_vendor.resolveComponent("custom-nav-bar");
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
   const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
   const _easycom_commen_title2 = common_vendor.resolveComponent("commen-title");
   const _easycom_theme_box2 = common_vendor.resolveComponent("theme-box");
-  (_easycom_uni_icons2 + _easycom_uni_dateformat2 + _easycom_commen_title2 + _easycom_theme_box2)();
+  (_easycom_custom_nav_bar2 + _easycom_uni_icons2 + _easycom_uni_dateformat2 + _easycom_commen_title2 + _easycom_theme_box2)();
 }
+const _easycom_custom_nav_bar = () => "../../components/custom-nav-bar/custom-nav-bar.js";
 const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
 const _easycom_uni_dateformat = () => "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.js";
 const _easycom_commen_title = () => "../../components/commen-title/commen-title.js";
 const _easycom_theme_box = () => "../../components/theme-box/theme-box.js";
 if (!Math) {
-  (_easycom_uni_icons + _easycom_uni_dateformat + _easycom_commen_title + _easycom_theme_box)();
+  (_easycom_custom_nav_bar + _easycom_uni_icons + _easycom_uni_dateformat + _easycom_commen_title + _easycom_theme_box)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
@@ -62,7 +64,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     o: common_assets._imports_0$1,
     p: common_vendor.f(8, (item, k0, i0) => {
       return {
-        a: "1cf27b2a-7-" + i0
+        a: "1cf27b2a-8-" + i0
       };
     }),
     q: common_vendor.p({

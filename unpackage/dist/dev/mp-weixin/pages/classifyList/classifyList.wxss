@@ -15,6 +15,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5rpx;
+  padding: 20rpx;
 }
 .classify_box .pic_box .pic_item.data-v-d7121c9c {
   height: 440rpx;

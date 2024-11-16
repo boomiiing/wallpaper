@@ -1,0 +1,56 @@
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.nav_bar .nav_main_box.data-v-412fc155 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #fff 400%), linear-gradient(to right, #B4F8C8, #70D6FF);
+  padding: 0 20rpx;
+}
+.nav_bar .nav_main_box .nav_search.data-v-412fc155 {
+  display: flex;
+  align-items: center;
+}
+.nav_bar .nav_main_box .nav_search .nav_title.data-v-412fc155 {
+  font-size: 40rpx;
+  font-weight: 800;
+  margin-right: 30rpx;
+}
+.nav_bar .nav_main_box .nav_search .bav_input.data-v-412fc155 {
+  background: rgba(255, 255, 255, 0.7);
+  height: 55rpx;
+  width: 150px;
+  border-radius: 30rpx;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.nav_bar .nav_main_box .nav_search .bav_input .placehold.data-v-412fc155 {
+  color: #ccc;
+  font-size: 35rpx;
+  margin-left: 10rpx;
+}
+.nav_bar .status_fill.data-v-412fc155 {
+  width: 100%;
+}
+.nav_bar uni-popup.data-v-412fc155 {
+  background: #fff;
+  width: 100%;
+}
+.nav_bar uni-popup .popup-content.data-v-412fc155 {
+  background: #fff;
+  width: 100%;
+}

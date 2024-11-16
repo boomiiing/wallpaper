@@ -12,6 +12,7 @@
 /* 透明度 */
 /* 文章场景相关 */
 .main_classify_box.data-v-6bcfa975 {
+  padding: 20rpx;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20rpx;
