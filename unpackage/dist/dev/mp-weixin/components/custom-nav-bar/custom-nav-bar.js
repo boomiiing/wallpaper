@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const utils_system = require("../../utils/system.js");
 if (!Array) {
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
   const _easycom_uni_popup2 = common_vendor.resolveComponent("uni-popup");
@@ -12,31 +13,29 @@ if (!Math) {
 }
 const _sfc_main = {
   __name: "custom-nav-bar",
+  props: {
+    title: {
+      type: String,
+      default: "壁纸"
+    }
+  },
   setup(__props) {
     const popup = common_vendor.ref(null);
     const openSearch = () => {
       popup.value.open("right");
     };
-    const system = common_vendor.index.getSystemInfoSync();
-    const statusBarHeight = common_vendor.ref(system.statusBarHeight);
-    const {
-      top,
-      height,
-      bottom
-    } = common_vendor.index.getMenuButtonBoundingClientRect();
-    const searchBarHeight = common_vendor.ref(height + (top - statusBarHeight.value) * 2);
-    const statusFillHeight = searchBarHeight.value + statusBarHeight.value;
     return (_ctx, _cache) => {
       return {
-        a: statusBarHeight.value + "px",
-        b: common_vendor.p({
+        a: common_vendor.unref(utils_system.statusBarHeight)() + "px",
+        b: common_vendor.t(__props.title),
+        c: common_vendor.p({
           type: "search",
           size: "20"
         }),
-        c: common_vendor.o(openSearch),
-        d: searchBarHeight.value + "px",
-        e: statusFillHeight + "px",
-        f: common_vendor.sr(popup, "412fc155-1", {
+        d: common_vendor.o(openSearch),
+        e: common_vendor.unref(utils_system.searchBarHeight)() + "px",
+        f: common_vendor.unref(utils_system.statusFillHeight)() + "px",
+        g: common_vendor.sr(popup, "412fc155-1", {
           "k": "popup"
         })
       };

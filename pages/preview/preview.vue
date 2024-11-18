@@ -6,7 +6,7 @@
 			</swiper-item>
 		</swiper>
 		<view class="mask_box" v-show="showFlag">
-			<view class="goback">
+			<view class="goback" @click="goBack" :style="{'top':statusBarHeight() + 'px'}">
 				<uni-icons  type="left" size="30" ></uni-icons>
 			</view>
 			<view class="count">
@@ -135,6 +135,7 @@
 
 <script setup>true
 	import {ref} from 'vue';
+	import {statusBarHeight} from '@/utils/system.js'
  let showFlag = ref(true)
  const maskShow = ()=>{
 	 showFlag.value = !showFlag.value
@@ -158,6 +159,9 @@
  function submitScore(){
 	 
  }
+ const goBack = ()=>{
+	 uni.navigateBack()
+ }
 </script>
 
 <style lang='scss' scoped>
@@ -180,7 +184,7 @@
 		.mask_box{
 			.goback{
 				position: absolute;
-				top: 20rpx;
+				/* top: 10rpx; */
 				left: 20rpx;
 				:deep(){
 					.uni-icons{

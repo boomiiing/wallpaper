@@ -1,7 +1,12 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+if (!Array) {
+  const _easycom_custom_nav_bar2 = common_vendor.resolveComponent("custom-nav-bar");
+  _easycom_custom_nav_bar2();
+}
+const _easycom_custom_nav_bar = () => "../../components/custom-nav-bar/custom-nav-bar.js";
 if (!Math) {
-  ThemeBox();
+  (_easycom_custom_nav_bar + ThemeBox)();
 }
 const ThemeBox = () => "../../components/theme-box/theme-box.js";
 const _sfc_main = {
@@ -9,12 +14,15 @@ const _sfc_main = {
   setup(__props) {
     return (_ctx, _cache) => {
       return {
-        a: common_vendor.f(14, (item, k0, i0) => {
+        a: common_vendor.p({
+          title: "分类"
+        }),
+        b: common_vendor.f(14, (item, k0, i0) => {
           return {
-            a: "6bcfa975-0-" + i0
+            a: "6bcfa975-1-" + i0
           };
         }),
-        b: common_vendor.p({
+        c: common_vendor.p({
           imageSrc: "../../common/images/preview_small.webp"
         })
       };

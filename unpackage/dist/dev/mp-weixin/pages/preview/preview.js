@@ -1,6 +1,7 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const common_assets = require("../../common/assets.js");
+const utils_system = require("../../utils/system.js");
 if (!Array) {
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
   const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
@@ -40,6 +41,9 @@ const _sfc_main = {
     }
     function submitScore() {
     }
+    const goBack = () => {
+      common_vendor.index.navigateBack();
+    };
     return (_ctx, _cache) => {
       return {
         a: common_vendor.f(5, (item, k0, i0) => {
@@ -51,57 +55,59 @@ const _sfc_main = {
           type: "left",
           size: "30"
         }),
-        e: common_vendor.p({
+        e: common_vendor.o(goBack),
+        f: common_vendor.unref(utils_system.statusBarHeight)() + "px",
+        g: common_vendor.p({
           date: /* @__PURE__ */ new Date(),
           format: "hh:mm"
         }),
-        f: common_vendor.p({
+        h: common_vendor.p({
           date: /* @__PURE__ */ new Date(),
           format: "MM月dd日"
         }),
-        g: common_vendor.p({
+        i: common_vendor.p({
           type: "info",
           size: "25"
         }),
-        h: common_vendor.o(($event) => toggle()),
-        i: common_vendor.p({
+        j: common_vendor.o(($event) => toggle()),
+        k: common_vendor.p({
           type: "star",
           size: "25"
         }),
-        j: common_vendor.o(openCountPopup),
-        k: common_vendor.p({
+        l: common_vendor.o(openCountPopup),
+        m: common_vendor.p({
           type: "download",
           size: "25"
         }),
-        l: common_vendor.unref(showFlag),
-        m: common_vendor.p({
+        n: common_vendor.unref(showFlag),
+        o: common_vendor.p({
           type: "closeempty"
         }),
-        n: common_vendor.o(closeInfo),
-        o: common_vendor.o(($event) => common_vendor.isRef(rateValue) ? rateValue.value = $event : rateValue = $event),
-        p: common_vendor.p({
+        p: common_vendor.o(closeInfo),
+        q: common_vendor.o(($event) => common_vendor.isRef(rateValue) ? rateValue.value = $event : rateValue = $event),
+        r: common_vendor.p({
           readonly: "true",
           modelValue: common_vendor.unref(rateValue)
         }),
-        q: common_vendor.f(5, (item, k0, i0) => {
+        s: common_vendor.f(5, (item, k0, i0) => {
           return {};
         }),
-        r: common_vendor.sr(popupBox, "2dad6c07-6", {
+        t: common_vendor.sr(popupBox, "2dad6c07-6", {
           "k": "popupBox"
         }),
-        s: common_vendor.p({
+        v: common_vendor.p({
           type: "closeempty"
         }),
-        t: common_vendor.o(closeCount),
-        v: common_vendor.o(($event) => rateCount.value = $event),
-        w: common_vendor.p({
+        w: common_vendor.o(closeCount),
+        x: common_vendor.o(($event) => rateCount.value = $event),
+        y: common_vendor.p({
           margin: "5",
           size: "30",
           modelValue: rateCount.value
         }),
-        x: common_vendor.t(rateCount.value),
-        y: common_vendor.o(submitScore),
-        z: common_vendor.sr(setCount, "2dad6c07-9", {
+        z: common_vendor.t(rateCount.value),
+        A: common_vendor.o(submitScore),
+        B: common_vendor.sr(setCount, "2dad6c07-9", {
           "k": "setCount"
         })
       };

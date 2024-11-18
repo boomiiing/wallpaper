@@ -1,1 +1,1 @@
-<view class="classify_box data-v-d7121c9c" style="padding:20px"><view class="pic_box data-v-d7121c9c"><view wx:for="{{a}}" wx:for-item="item" class="pic_item data-v-d7121c9c"><image class="data-v-d7121c9c" mode="aspectFill" src="{{b}}"></image></view></view></view>
+<view class="classify_box data-v-d7121c9c" style="padding:5rpx"><view class="pic_box data-v-d7121c9c"><view wx:for="{{a}}" wx:for-item="item" class="pic_item data-v-d7121c9c"><image class="data-v-d7121c9c" mode="aspectFill" src="{{b}}" bindtap="{{c}}"></image></view></view></view>

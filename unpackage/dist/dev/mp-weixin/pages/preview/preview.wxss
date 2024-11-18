@@ -30,7 +30,7 @@
 }
 .preview .mask_box .goback.data-v-2dad6c07 {
   position: absolute;
-  top: 20rpx;
+  /* top: 10rpx; */
   left: 20rpx;
 }
 .preview .mask_box .goback.data-v-2dad6c07  .uni-icons {

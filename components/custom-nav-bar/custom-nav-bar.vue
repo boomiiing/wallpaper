@@ -1,12 +1,12 @@
 <template>
 	<view class="nav_bar">
 		<view class="nav_main_box">
-			<view class="status_box" :style="{'height':statusBarHeight + 'px'}">
+			<view class="status_box" :style="{'height':statusBarHeight() + 'px'}">
 
 			</view>
-			<view class="nav_search" :style="{'height':searchBarHeight + 'px'}">
+			<view class="nav_search" :style="{'height':searchBarHeight() + 'px'}">
 				<view class="nav_title">
-					标题
+					{{title}}
 				</view>
 				<view class="bav_input" @click="openSearch">
 					<uni-icons type="search" size="20"></uni-icons>
@@ -16,7 +16,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="status_fill" :style="{'height':statusFillHeight + 'px'}">
+		<view class="status_fill" :style="{'height':statusFillHeight() + 'px'}">
 			
 		</view>
 		<uni-popup ref="popup">
@@ -31,19 +31,26 @@
 	import {
 		ref
 	} from 'vue';
+	import {statusBarHeight,searchBarHeight,statusFillHeight} from '@/utils/system.js'
+	defineProps({
+		title:{
+			type:String,
+			default:'壁纸'
+		},
+		})
 	const popup = ref(null)
 	const openSearch = () => {
 		popup.value.open('right')
 	}
-	const system = uni.getSystemInfoSync()
-	const statusBarHeight = ref(system.statusBarHeight)
-	const {
-		top,
-		height,
-		bottom
-	} = uni.getMenuButtonBoundingClientRect()
-	const searchBarHeight = ref(height + (top - statusBarHeight.value) * 2)
-	const statusFillHeight = searchBarHeight.value + statusBarHeight.value
+	// const system = uni.getSystemInfoSync()
+	// const statusBarHeight = ref(system.statusBarHeight)
+	// const {
+	// 	top,
+	// 	height,
+	// 	bottom
+	// } = uni.getMenuButtonBoundingClientRect()
+	// const searchBarHeight = ref(height + (top - statusBarHeight.value) * 2)
+	// const statusFillHeight = searchBarHeight.value + statusBarHeight.value
 </script>
 
 <style lang="scss" scoped>
